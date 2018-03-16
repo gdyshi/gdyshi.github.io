@@ -53,7 +53,8 @@ icon: bookmark
 ### 互联网
 「[运营大湿兄](https://ask.hellobi.com/blog/qinlu)」
 
-
+### 网页生成器
+「[jekyll](https://jekyllrb.com/)」
 
 ## Comments
 
