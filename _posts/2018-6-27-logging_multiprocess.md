@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "logging模块多进程解决方案"
-categories: JavaScript
+categories: python
 tags:  python logging windows 多进程 flask
 ---
 
