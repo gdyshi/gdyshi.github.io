@@ -36,8 +36,10 @@ Flask在0.3版本后就有了日志工具logger，此工具是在Python的标准
 进行二次封装，所以我们可以直接进行日志记录
 
 ### 问题场景
+
 我们做的日志需要记录服务器端收到的每一次网络请求。包括请求ip、请求内容等。
 日志文件按照50M进行自动分割。按照网上搜索的教程配置完毕后报错
+
 ```
 --- Logging error ---
 Traceback (most recent call last):
@@ -55,6 +57,7 @@ PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无�
 flask 在执行网络请求时，会为请求端分配单独进程进行处理。此时就存在有多个
 进程同时进行日志处理的情况。文件分割需要对文件进行复制、删除等操作。而logging模块
 本身对于多个进程往同一个文件写日志不是安全的。
+
 >Because there is no standard way to serialize access to a single file across multiple processes in Python. If you need to log to a single file from multiple processes, one way of doing this is to have all the processes log to a SocketHandler, and have a separate process which implements a socket server which reads from the socket and logs to file. (If you prefer, you can dedicate one thread in one of the existing processes to perform this function.)
 
 于是就出现了上述错误
