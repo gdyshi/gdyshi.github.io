@@ -99,7 +99,7 @@ C常规参数类型与ctypes、python类型对应关系表如下：
 * 函数调用`ret = libtest.parm_int(c_int(1))`
 
 ## 实例
-我专门针对c_types调用动态库写了一个[实例](https://github.com/gdyshi/python_expreiment/tree/master/library_verification/c_types)。实例包括两个部分
+我专门针对c_types调用动态库写了一个[实例](https://github.com/gdyshi/python_experiment/tree/master/library_verification/c_types)。实例包括两个部分
 - 用C实现的动态库代码。主要从入参类型、返回值类型、回调函数调用三个方面实现及提供接口
 - 用python实现的对动态库调用代码。用于调用动态库的所有接口
 
