@@ -18,7 +18,7 @@ tensorflow版本更新很快，猛一回头发现已经推出更高级的api了
 
 ### tensorflow高级api
 
-![api](Pic\1809\api.png)
+![api](https://raw.githubusercontent.com/gdyshi/gdyshi.github.io/master/_posts/Pic/1809/api.png)
 
 上图是tensorflow软件栈图，我之前学习和实现的网络模型（0.12a）使用的是 低级api, 现在的新版本（1.10）对低级api进行了封装，形成了高级api(estimator keras)，所以对原有模型进行了一次api替换
 
@@ -32,7 +32,7 @@ tensorflow版本更新很快，猛一回头发现已经推出更高级的api了
 - 二分类问题的准确率在50%左右
 - 训练过程中loss值会变化到一个固定值，然后就不再变化了
 
-![api](Pic\1809\loss-acc.png)
+![api](https://raw.githubusercontent.com/gdyshi/gdyshi.github.io/master/_posts/Pic/1809/loss-acc.png)
 
 ```
 epoch:0
@@ -92,7 +92,7 @@ Evaluation results:	{'true_negatives': 0.0, 'global_step': 5, 'loss': 0.79326165
             numpy.savetxt(r"/home/zq537/ckpt/index.txt", logit_value['name'])
   ```
 - 内部训练过程排查
-  > 如果网络和数据都没问题，那么问题排查起来就比较困难了。接下来的方向可能需要深入模型内部的训练过程，看哪些步骤导致loss和准确率不变，将所有操作的输出和反向传播的梯度都记录到tensorboard中进行查看，发现进行少量的训练后，反向传播的梯度值分布都在0附近，这样网络权重基本就不会更新了，网络参数没有变化，自然准确率和loss也不会变化了。![api](Pic\1809\tfrecord.png)
+  > 如果网络和数据都没问题，那么问题排查起来就比较困难了。接下来的方向可能需要深入模型内部的训练过程，看哪些步骤导致loss和准确率不变，将所有操作的输出和反向传播的梯度都记录到tensorboard中进行查看，发现进行少量的训练后，反向传播的梯度值分布都在0附近，这样网络权重基本就不会更新了，网络参数没有变化，自然准确率和loss也不会变化了。![api](https://raw.githubusercontent.com/gdyshi/gdyshi.github.io/master/_posts/Pic/1809/tfrecord.png)
   > 是什么原因导致梯度为0？梯度是从loss开始，一层一层往前传的；而loss是由预测值和实际标签共同决定的。于是我开始查看预测值和实际标签的数值。先把数据集进行简化，生成10个数据的数据集，batch-size设为10，然后在训练回调中把稳定（loss不变）时的预测值和实际标签打印出来，发现了问题：稳定状态下预测值大部分两分类的准确率都是1，这很明显是给网络的评判标准（loss函数）有问题
   ```
   labels = [[1 0]
