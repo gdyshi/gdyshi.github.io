@@ -18,7 +18,7 @@ tags:  tensorflow keras 模型导出 神经网络
 
 ## 待写博文列表
 
-- [ ] tensorflow模型部署系列————tensorflow预训练模型导出
+- [x] [tensorflow模型部署系列————tensorflow预训练模型导出](https://blog.csdn.net/chongtong/article/details/90474737)
 - [ ] tensorflow模型部署系列————tensorflow单机python部署
 - [ ] tensorflow模型部署系列————tensorflow单机c++部署
 - [ ] tensorflow模型部署系列————tensorflow单机java部署
