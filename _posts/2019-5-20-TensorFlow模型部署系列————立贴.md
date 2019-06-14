@@ -2,7 +2,7 @@
 layout: post
 title:  "tensorflow模型部署系列————立贴"
 categories: tensorflow
-tags:  tensorflow keras 模型导出 神经网络
+tags:  tensorflow keras 模型部署 神经网络
 ---
 
 * content
@@ -19,8 +19,8 @@ tags:  tensorflow keras 模型导出 神经网络
 ## 系列博文列表
 
 - [x] [tensorflow模型部署系列————预训练模型导出](https://blog.csdn.net/chongtong/article/details/90474737)
-- [ ] tensorflow模型部署系列————单机python部署
-- [ ] tensorflow模型部署系列————单机c++部署
+- [X] [tensorflow模型部署系列————单机python部署](https://blog.csdn.net/chongtong/article/details/90693787)
+- [X] [tensorflow模型部署系列————单机c++部署](https://blog.csdn.net/chongtong/article/details/91947690)
 - [ ] tensorflow模型部署系列————单机java部署
 - [ ] tensorflow模型部署系列————嵌入式部署
 - [ ] tensorflow模型部署系列————浏览器前端部署

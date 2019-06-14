@@ -2,7 +2,7 @@
 layout: post
 title:  "tensorflow模型部署系列————单机python部署"
 categories: tensorflow
-tags:  tensorflow keras 模型文件 tensorboard 神经网络
+tags:  tensorflow keras 模型文件 tensorboard 神经网络 模型部署
 ---
 
 * content
@@ -10,12 +10,12 @@ tags:  tensorflow keras 模型文件 tensorboard 神经网络
 
 
 ## 摘要
-本文为系列博客[tensorflow模型部署系列](https://blog.csdn.net/chongtong/article/details/90379347)的一部分，用于实现通用模型的部署。通用主要体现在通过tensorboard图从已保存的模型中还原并查看模型详细结构，以及自定义模型的输入输出tensor
+本文为系列博客[tensorflow模型部署系列](https://blog.csdn.net/chongtong/column/info/39386)的一部分，用于实现通用模型的部署。通用主要体现在通过tensorboard图从已保存的模型中还原并查看模型详细结构，以及自定义模型的输入输出tensor。相关源码见[链接](https://github.com/gdyshi/model_deployment)
 
 ---
 
 ## 引言
-`本文为系列博客`[tensorflow模型部署系列](https://blog.csdn.net/chongtong/article/details/90379347)的一部分，用于`python`语言实现通用模型的部署。通用主要体现在通过`tensorboard`图从已保存的模型中还原并查看模型详细结构，以及自定义模型的输入输出tensor。本文主要使用keras和pb两种模型文件，其它格式的模型文件请先进行格式转换[tensorflow模型部署系列————预训练模型导出](https://blog.csdn.net/chongtong/article/details/90474737)
+`本文为系列博客`[tensorflow模型部署系列](https://blog.csdn.net/chongtong/column/info/39386)的一部分，用于`python`语言实现通用模型的部署。通用主要体现在通过`tensorboard`图从已保存的模型中还原并查看模型详细结构，以及自定义模型的输入输出tensor。本文主要使用keras和pb两种模型文件，其它格式的模型文件请先进行格式转换[tensorflow模型部署系列————预训练模型导出](https://blog.csdn.net/chongtong/article/details/90474737)
 
 
 ## 主题

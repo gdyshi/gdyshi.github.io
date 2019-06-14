@@ -9,12 +9,12 @@ tags:  tensorflow keras 模型导出 神经网络
 {:toc}
 
 ## 摘要
-本文为系列博客[tensorflow模型部署系列](https://blog.csdn.net/chongtong/article/details/90379347)的一部分，用于为模型部署提供最开始的输入————标准化的模型文件。
+本文为系列博客[tensorflow模型部署系列](https://blog.csdn.net/chongtong/column/info/39386)的一部分，用于为模型部署提供最开始的输入————标准化的模型文件。相关源码见[链接](https://github.com/gdyshi/model_deployment)
 
 ---
 
 ## 引言
-本文为系列博客[tensorflow模型部署系列](https://blog.csdn.net/chongtong/article/details/90379347)的一部分，用于为模型部署提供最开始的输入————标准化的模型文件。相关示例代码放在[gdyshi的github](https://github.com/gdyshi/model_deployment)上
+本文为系列博客[tensorflow模型部署系列](https://blog.csdn.net/chongtong/column/info/39386)的一部分，用于为模型部署提供最开始的输入————标准化的模型文件。相关示例代码放在[gdyshi的github](https://github.com/gdyshi/model_deployment)上
 
 
 ## 主题
