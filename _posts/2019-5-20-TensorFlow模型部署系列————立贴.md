@@ -21,7 +21,7 @@ tags:  tensorflow keras 模型部署 神经网络
 - [x] [tensorflow模型部署系列————预训练模型导出](https://blog.csdn.net/chongtong/article/details/90474737)
 - [X] [tensorflow模型部署系列————单机python部署](https://blog.csdn.net/chongtong/article/details/90693787)
 - [X] [tensorflow模型部署系列————单机c++部署](https://blog.csdn.net/chongtong/article/details/91947690)
-- [ ] tensorflow模型部署系列————单机java部署
+- [x] [tensorflow模型部署系列————单机java部署](https://blog.csdn.net/chongtong/article/details/94403309)
 - [ ] tensorflow模型部署系列————嵌入式部署
 - [ ] tensorflow模型部署系列————浏览器前端部署
 - [ ] tensorflow模型部署系列————独立简单服务器部署

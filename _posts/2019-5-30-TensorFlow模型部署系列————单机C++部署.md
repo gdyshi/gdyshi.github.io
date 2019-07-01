@@ -54,7 +54,7 @@ tensorflow官方同时提供了[C++接口](https://tensorflow.google.cn/guide/ex
 
 #### API讲解
 
-tensorflow的C接口详见[c_api.h](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/c/c_api.h)，这里针对常用接口做一个说明，并跟将C接口跟[tensorflow模型部署系列————单机python部署](https://blog.csdn.net/chongtong/article/details/90693787)中的python代码进行对应，以便于读者更好地理解接口
+tensorflow的C接口详见[c_api.h](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/c/c_api.h)，这里针对常用接口做一个说明，并跟将C接口跟tensorflow模型部署系列————单机python部署](https://blog.csdn.net/chongtong/article/details/90693787)中的python代码进行对应，以便于读者更好地理解接口
 
 - 加载模型文件，对应python代码`tensors = tf.import_graph_def(output_graph_def, name="")`
 
