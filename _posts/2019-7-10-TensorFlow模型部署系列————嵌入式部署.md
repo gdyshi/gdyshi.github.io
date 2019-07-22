@@ -10,7 +10,7 @@ tags:  tensorflow keras 模型部署 嵌入式 单片机 神经网络 边缘计�
 
 
 ## 摘要
-本文为系列博客[tensorflow模型部署系列](https://blog.csdn.net/chongtong/column/info/39386)的一部分，用于实现通用模型的部署。本文主要实现用tflite接口调用tensorflow模型进行推理。相关源码见[链接](https://github.com/gdyshi/model_deployment)
+本文为系列博客[tensorflow模型部署系列](https://blog.csdn.net/chongtong/column/info/39386)的一部分，用于实现通用模型的部署。本文主要实现用tflite接口调用tensorflow模型进行推理。实现了tensorflow在边缘计算及一些低成本方案、物联网或工业级应用中使用的轻量级模型部署方案，并提供相关示例源代码。相关源码见[链接](https://github.com/gdyshi/model_deployment)
 
 ---
 
@@ -99,19 +99,19 @@ tflite的python接口详见[官方文档](https://tensorflow.google.cn/api_docs/
   >input_details = interpreter.get_input_details()
   > output_details = interpreter.get_output_details()
   > ```
-  
+
 - 张量填充
 
   > ```
   >interpreter.set_tensor(input_details[0]['index'], d)
   > ```
-  
+
 - 运行推理
 
   > ```
   >interpreter.invoke()
   > ```
-  
+
 - 获取张量值
 
   > ```
@@ -206,25 +206,25 @@ tflite的编译需要使用tensorflow源代码，下面给出简单的编译步�
    ```
    HELLOW_TFLIET := hellow_tf
    HELLOW_TFLIET_BINARY := $(BINDIR)$(HELLOW_TFLIET)
-   
+
    HELLOW_TFLIET_SRCS := \
    tensorflow/lite/tools/make/C++/model.cc \
    tensorflow/lite/tools/make/C++/example.cc
-   
+
    INCLUDES += \
    -Itensorflow/lite/tools/make/C++/
-   	
+
    ALL_SRCS += \
      $(HELLOW_TFLIET_SRCS)
-   
+
    CORE_CC_EXCLUDE_SRCS += \
    $(wildcard tensorflow/lite/tools/make/C++/model.cc) \
    $(wildcard tensorflow/lite/tools/make/C++/example.cc)
-   
+
    HELLOW_TFLIET_OBJS := $(addprefix $(OBJDIR), \
    $(patsubst %.cc,%.o,$(patsubst %.c,%.o,$(HELLOW_TFLIET_SRCS))))
-   
-   $(HELLOW_TFLIET): $(LIB_PATH) $(HELLOW_TFLIET_OBJS) 
+
+   $(HELLOW_TFLIET): $(LIB_PATH) $(HELLOW_TFLIET_OBJS)
    	@mkdir -p $(BINDIR)
    	$(CXX) $(CXXFLAGS) $(INCLUDES) \
    	-o $(HELLOW_TFLIET_BINARY) $(HELLOW_TFLIET_OBJS) \
