@@ -272,14 +272,62 @@ android {
     - [tflite的python模型封装库代码](https://github.com/gdyshi/model_deployment/blob/master/tflite/python/model.py)
     - [tflite的python模型封装库示例代码](https://github.com/gdyshi/model_deployment/blob/master/tflite/python/example.py)
 - tflite的c/c++模型部署代码
-  - [tflite的python模型封装库代码](https://github.com/gdyshi/model_deployment/blob/master/tflite/C%2B%2B/model.cc)
-  - [tflite的python模型封装库示例代码](https://github.com/gdyshi/model_deployment/blob/master/tflite/C%2B%2B/example.cc)
+  - [tflite的c++模型封装库代码](https://github.com/gdyshi/model_deployment/blob/master/tflite/C%2B%2B/model.cc)
+  - [tflite的c++模型封装库示例代码](https://github.com/gdyshi/model_deployment/blob/master/tflite/C%2B%2B/example.cc)
   - [编译步骤](https://github.com/gdyshi/model_deployment/blob/master/tflite/C%2B%2B/readme.md)
+- tflite的c/c++模型部署代码——去除对tensorflow源码的依赖
+  - [tflite的c++模型封装库代码]( https://github.com/gdyshi/model_deployment/blob/master/tflite/lib_app/model.cc )
+  - [tflite的c++模型封装库示例代码]( https://github.com/gdyshi/model_deployment/blob/master/tflite/lib_app /example.cc)
 - tflite的java(android)模型部署代码
-  - [tflite的python模型封装库代码](https://github.com/gdyshi/model_deployment/blob/master/tflite/JAVA/app/src/main/java/com/example/gdyshi/hello_tf/Model.java)
-  - [tflite的python模型封装库示例代码](https://github.com/gdyshi/model_deployment/blob/master/tflite/JAVA/app/src/main/java/com/example/gdyshi/hello_tf/MainActivity.java)
+  - [tflite的java模型封装库代码](https://github.com/gdyshi/model_deployment/blob/master/tflite/JAVA/app/src/main/java/com/example/gdyshi/hello_tf/Model.java)
+  - [tflite的java模型封装库示例代码](https://github.com/gdyshi/model_deployment/blob/master/tflite/JAVA/app/src/main/java/com/example/gdyshi/hello_tf/MainActivity.java)
 - [pb文件转换为tflite模型文件代码](https://github.com/gdyshi/model_deployment/blob/master/tflite/pb_to_tflite.py)
 - [从tensorflow的session转换为tflite模型文件代码](https://github.com/gdyshi/model_deployment/blob/master/tflite/session_to_tflite.py)
+
+## 后记
+
+因最近在做一个嵌入式移植的实际项目，前面我放出的源码需要修改多处Makefile，容易出错，加上评论区有人咨询代码编译相关问题，故对嵌入式部署博文及代码进行更新。主要目的是简化编译操作，不需要下载整个tensorflow代码，只需引用相关头文件就可完成编译。
+
+要达到以上目的，需要去除编译自已写的代码时对tflite相关源码的依赖，一种方式是将tensorflow代码先编译为库，这样大家在编译自己的特殊应用时只需链接编译好的库即可。因为官方的编译脚本也在不断更新中，我这里主要把修改点进行说明。同样的，我会把相关代码放到github里。
+
+### 编译tflib
+
+主要通过修改官方编译示例的编译脚本来实现。
+
+1. 复制一份编译脚本
+
+    ```
+    cp Makefile Makefile_tflib
+    cp build_rpi_lib.sh build_tflib.sh
+    ```
+
+2. 在`Makefile_tflib`文件修改如下行
+
+    ```
+    $(LIB_PATH): tensorflow/lite/schema/schema_generated.h $(LIB_OBJS)
+        @mkdir -p $(dir $@)
+        $(AR) $(ARFLAGS) $(LIB_PATH) $(LIB_OBJS)
+    ++++$(CC) -shared -o $(LIBDIR)libtensorflow-lite.so $(LIB_OBJS)
+    ```
+
+3. 在`build_tflib.sh`文件中将`Makefile`替换为`Makefile_tflib`
+
+4. 加载交叉编译环境，然后执行`./build_tflib.sh`进行编译
+
+    编译完成后，会在`./gen/rpi_armv7l/lib`下生成`libtensorflow-lite.a`和`libtensorflow-lite.so`文件。只要嵌入式环境的编译器没变，我们就可以一直用生成的这两个文件
+
+5. 打包库文件。
+
+    ```
+    mkdir -p mpapp/tflib/lib
+    cp ./gen/rpi_armv7l/lib/libtensorflow* mpapp/tflib/lib
+    ```
+
+    
+
+### 编译应用代码
+
+执行`build.sh`即可
 
 ## 附录
 

@@ -25,9 +25,11 @@ tags:  tensorflow keras 模型部署 神经网络
 - [x] [tensorflow模型部署系列————嵌入式部署](https://blog.csdn.net/chongtong/article/details/95355814)
 - [x] [tensorflow模型部署系列————浏览器前端部署](https://blog.csdn.net/chongtong/article/details/96865687)
 - [x] [tensorflow模型部署系列————独立简单服务器部署](https://blog.csdn.net/chongtong/article/details/100073030)
-- [ ] tensorflow模型部署系列————TensorFlow Serving部署
-- [ ] tensorflow模型部署系列————分布式服务器部署
+- [x] [tensorflow模型部署系列————TensorFlow Serving部署](https://blog.csdn.net/chongtong/article/details/102501464)
+~~tensorflow模型部署系列————分布式服务器部署~~ 
 
+## 后记
+分布式服务器部署博文因为TensorFlow Serving已经做进去了，就不再单独写了。感谢大家的支持和鼓励，tensorflow模型部署系列博文已完成。后续我会不断完善本系列博文内容及示例代码，请继续关注。近期有一个在海思平台上移植人脸识别模型的项目，我会将一些通用技术放入本系列博文中。
 
 ## 参考
 ---
