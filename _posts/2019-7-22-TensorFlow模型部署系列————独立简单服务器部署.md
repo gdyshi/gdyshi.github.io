@@ -71,4 +71,4 @@ if __name__ == '__main__':
 ## 参考
 ---
 - [flask 官方文档](https://flask.palletsprojects.com/en/1.1.x/)
-- [flask 中文文档](http://docs.jinkan.org/docs/flask/)
+- [flask 中文文档](https://docs.jinkan.org/docs/flask/)

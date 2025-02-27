@@ -24,13 +24,13 @@ logging模块是Python内置的标准模块，主要用于输出运行日志，
 从Python2.3起,Python的标准库加入了logging模块。
 logging模块是Python内置的标准模块，主要用于输出运行日志，
 可以设置输出日志的等级、日志保存路径、日志文件回滚等。相关使用方法可以
-参考[博客](http://www.cnblogs.com/dahu-daqing/p/7040764.html)
+参考[博客](https://www.cnblogs.com/dahu-daqing/p/7040764.html)
 
 
-### [flask](http://flask.pocoo.org/)
+### [flask](https://flask.pocoo.org/)
 Flask是一个使用 Python 编写的轻量级 Web 应用框架。让我们可以使用Python语
 言快速实现一个网站或Web服务。相关使用方法可以
-参考[中文文档](http://www.pythondoc.com/flask/index.html)
+参考[中文文档](https://www.pythondoc.com/flask/index.html)
 
 Flask在0.3版本后就有了日志工具logger，此工具是在Python的标准库logging模块
 进行二次封装，所以我们可以直接进行日志记录
@@ -113,7 +113,7 @@ ConcurrentLogHandler的homepage页已经说明了替代的库
 ## 参考
 ---
 - [logging模块官方文档](https://docs.python.org/3/library/logging.html)
-- [logging使用博客](http://www.cnblogs.com/dahu-daqing/p/7040764.html)
+- [logging使用博客](https://www.cnblogs.com/dahu-daqing/p/7040764.html)
 - [concurrent-log-handler源码](https://github.com/Preston-Landers/concurrent-log-handler)
-- [flask官网](http://flask.pocoo.org/)
-- [flask中文文档](http://www.pythondoc.com/flask/index.html)
+- [flask官网](https://flask.pocoo.org/)
+- [flask中文文档](https://www.pythondoc.com/flask/index.html)

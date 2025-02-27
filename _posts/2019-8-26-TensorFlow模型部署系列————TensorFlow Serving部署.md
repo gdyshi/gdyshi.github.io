@@ -35,7 +35,7 @@ TensorFlow Serving是google官方推出的用于生产的[机器学习组件](ht
 
   > 添加源
   > ```
-  > echo "deb [arch=amd64] http://storage.googleapis.com/tensorflow-serving-apt stable tensorflow-model-server tensorflow-model-server-universal" | sudo tee /etc/apt/sources.list.d/tensorflow-serving.list && \curl https://storage.googleapis.com/tensorflow-serving-apt/tensorflow-serving.release.pub.gpg | sudo apt-key add -
+  > echo "deb [arch=amd64] https://storage.googleapis.com/tensorflow-serving-apt stable tensorflow-model-server tensorflow-model-server-universal" | sudo tee /etc/apt/sources.list.d/tensorflow-serving.list && \curl https://storage.googleapis.com/tensorflow-serving-apt/tensorflow-serving.release.pub.gpg | sudo apt-key add -
   > apt-get update
   > ```
   > 安装
@@ -74,7 +74,7 @@ tensorflow_model_server \
 
 #### 客户端测试
 
-服务端正常启动后就可以使用客户端进行测试了。TensorFlow Serving的请求和回复都是json格式，请求地址为`http://host:port/v1/models/${MODEL_NAME}`
+服务端正常启动后就可以使用客户端进行测试了。TensorFlow Serving的请求和回复都是json格式，请求地址为`https://host:port/v1/models/${MODEL_NAME}`
 
 预测接口的请求格式为
 

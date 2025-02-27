@@ -127,8 +127,8 @@ sudo pip3 install --upgrade tensorflow-gpu
 ## 参考
 ---
 - [TensorFlow官方安装教程](https://www.tensorflow.org/install/install_linux)
-- [Ubuntu16.04换源](http://blog.csdn.net/happywho250/article/details/52506321)
+- [Ubuntu16.04换源](https://blog.csdn.net/happywho250/article/details/52506321)
 - [pip换源](https://www.cnblogs.com/microman/p/6107879.html)
-- [CUDA下载链接](http://developer.nvidia.com/cuda-downloads)
-- [CUDA官方安装教程](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#axzz4VZnqTJ2A)
+- [CUDA下载链接](https://developer.nvidia.com/cuda-downloads)
+- [CUDA官方安装教程](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#axzz4VZnqTJ2A)
 - [CUDNN下载链接](https://developer.nvidia.com/cudnn)
