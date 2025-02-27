@@ -13,12 +13,12 @@ timezone: Asia/Shanghai
 
 # jekyll-seo-tag 设置 › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # --------------------------
-title: Nihil       # 主标题
+title: Gdyshi       # 主标题
 
-tagline: Nichts Hsu # 副标题
+tagline: gdyshi 的个人博客 # 副标题
 
 description: >- # 由 seo meta 和 atom feed 使用
-  Gdyshi 的个人博客
+  gdyshi 的个人博客
 
 # 填入你的网站的协议和域名.
 # 例如，'https://username.github.io'，注意不要以 '/' 结尾。
@@ -33,11 +33,11 @@ twitter:
 social:
   # 改为你的全名。
   # 这将会显示为帖子的默认作者以及页脚的版权所有者
-  name: Gdyshi
+  name: gdyshi
   email: gdyshi@126.com # 邮箱地址
   links:
     # 第一个链接将会作为版权所有者的链接
-    - https://nihil.cc/
+    - https://blog.gdyshi.top/
     - https://twitter.com/gdyshi # 推特主页
     - https://github.com/gdyshi # Github 主页
     # 取消注释以添加更多链接
