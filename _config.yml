@@ -15,7 +15,7 @@ timezone: Asia/Shanghai
 # --------------------------
 title: Gdyshi       # 主标题
 
-tagline: gdyshi 的个人博客 # 副标题
+tagline: gdyshi # 副标题
 
 description: >- # 由 seo meta 和 atom feed 使用
   gdyshi 的个人博客
