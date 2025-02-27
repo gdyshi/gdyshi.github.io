@@ -147,5 +147,5 @@ tfjs.converters.convert_tf_saved_model('./tf_model','./webmod_tf')
 
 ## 参考
 ---
-- [tensorflow js 官方网址]([https://js.tensorflow.org](https://js.tensorflow.org/))
+- [tensorflow js 官方网址](https://js.tensorflow.org/)
 - [tensorflow js 官方接口文档](https://js.tensorflow.org/api/latest/)
