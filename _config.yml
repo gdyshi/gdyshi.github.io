@@ -93,7 +93,7 @@ theme_mode: # [light | dark]
 backgroud_animation: true
 
 # 启用鼠标点击特效
-mouse_click_effect: true
+mouse_click_effect: false
 
 # 媒体资源 CDN 端点。
 # 注意一旦被分配，CDN 网址会被加在
