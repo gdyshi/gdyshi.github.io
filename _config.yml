@@ -59,7 +59,7 @@ webmaster_verifications:
 # 网页分析设置
 analytics:
   google:
-    id: # 填入你的 Google Analytics ID
+    id: G-T5E825PVNZ # 填入你的 Google Analytics ID
   goatcounter:
     id: # 填入你的 GoatCounter ID
   umami:
@@ -90,10 +90,10 @@ pageviews:
 theme_mode: # [light | dark]
 
 # 启用动画背景特效
-backgroud_animation: false
+backgroud_animation: true
 
 # 启用鼠标点击特效
-mouse_click_effect: false
+mouse_click_effect: true
 
 # 媒体资源 CDN 端点。
 # 注意一旦被分配，CDN 网址会被加在
@@ -130,7 +130,7 @@ panel:
 
 comments:
   # 帖子评论区全局开关，例如，'disqus'。保持为空表示禁用。
-  provider: # [disqus | utterances | giscus]
+  provider: waline # [disqus | utterances | giscus]
   # provider 选项可以是如下：
   # disqus 评论系统 > https://disqus.com/
   disqus:
@@ -141,7 +141,7 @@ comments:
     issue_term: # < 链接 | 路径 | 标题 | ...>
   # Waline 评论系统 › https://waline.js.org/
   waline:
-    server: # Vercal 服务端地址
+    server: https://waline-5e14s6hh2-gdyshis-projects.vercel.app/ # Vercal 服务端地址
     placeholder: 说点什么吧！ # 空白评论框时显示的文字
     avatar: mp # 默认头像  › https://waline.js.org/guide/client/avatar.html
   # Giscus 选项 › https://giscus.app
